@@ -1,14 +1,13 @@
+#include <unistd.h>
 #include "main.h"
 
 /**
- * _islower - Checks for lowercase character
- * @c: The character to be checked
+ * _putchar - Writes a character to stdout.
+ * @c: The character to print.
  *
- * Return: 1 if c is lowercase, 0 otherwise
+ * Return: On success, putchar(c); a character or a negative value if an error occurred.
  */
-int _islower(int c)
+int _putchar(char c)
 {
-    if (c >= 'a' && c <= 'z')
-        return (1);
-    return (0);
+    return write(1, &c, 1);
 }
